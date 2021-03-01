@@ -323,7 +323,13 @@ let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball'])
     Those values should come from the function's parameters: brand, model, storage, color, sold (in order).
 */
 
-//CODE HERE
+function Phone (brand, model, storage, color, sold) {
+    this.brand = brand
+    this.model = model
+    this.storage = storage
+    this.color = color
+    this.sold = sold
+}
 
   
 /*
@@ -338,11 +344,11 @@ let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball'])
 */
 
 //CODE HERE
-  // let phone1 = 
+  let phone1 = new Phone ('apple', 'iphone', 128, 'black', false)
   
-  // let phone2 = 
+  let phone2 = new Phone ('android', 'galaxy', 100, 'white', false)
   
-  // let phone3 = 
+  let phone3 = new Phone ('idk', 'noIdea', 1, 'invis', false)
   
 /*
     Last, add a prototype method to Phone.
@@ -352,6 +358,11 @@ let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball'])
     Don't forget about the context of BRAND and MODEL.
 */
 
-//CODE HERE
+Phone.prototype.sell = function (obj) {
+    if (this.sold === false) {
+        this.sold = true
+        return this
+    }
+}
 
   
